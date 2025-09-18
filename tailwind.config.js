@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#659a68", 
+      },
       fontFamily: {
         tiroBangla: ['"Tiro Bangla"', ...fontFamily.serif],
         hindSiliguri: ['"Hind Siliguri"', ...fontFamily.sans],

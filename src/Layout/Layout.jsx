@@ -8,7 +8,7 @@ const Layout = () => {
     return (
         <div>
             <Navbar />
-            <div className="bg-[#FAF9F6] pt-[64px] min-w-6xl mx-auto">
+            <div className="bg-[#FAF9F6]  min-w-6xl mx-auto">
                 <WhatsappButton />
                 <Outlet />
             </div>

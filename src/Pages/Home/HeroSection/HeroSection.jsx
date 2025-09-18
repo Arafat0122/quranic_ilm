@@ -1,73 +1,163 @@
+import { MoveLeft, MoveRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import FadeContent from "../../../Common/AnimatedText/AnimatedText";
+
+const NextArrow = ({ onClick }) => (
+  <div
+    className="absolute -right-7 top-1/3 z-10 cursor-pointer flex items-center px-4 py-2 text-black bg-[#C3A753] rounded-md shadow-lg"
+    onClick={onClick}
+  >
+    <MoveRight />
+  </div>
+);
+
+const PrevArrow = ({ onClick }) => (
+  <div
+    className="absolute -left-7 top-1/3 z-10 cursor-pointer flex items-center px-4 py-2 bg-white text-black rounded-md shadow-lg hover:bg-[#C3A753]"
+    onClick={onClick}
+  >
+    <MoveLeft />
+  </div>
+);
 
 const HeroSection = () => {
-    return (
-        <section
-            className="relative min-h-[40vh] flex items-center justify-center px-4 md:px-8 bg-cover bg-center"
-            style={{
-                backgroundColor: "#FAF9F6",
-            }}
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
+  const courses = [
+    {
+      title: "কোরআন পড়ার বুনিয়াদি",
+      price: "$99.00",
+      duration: "লাইভ ক্লাস",
+      level: "শুরুর দিক",
+      image: "/quran.png",
+      link: "/courses/reading-quran",
+    },
+    {
+      title: "হিফযুল কোরআন",
+      price: "$199.00",
+      duration: "অনলাইন সেশন",
+      level: "মধ্যম",
+      image: "/hifjul-quran.png",
+      link: "/courses/hifjul-quran",
+    },
+  ];
+
+  return (
+    <section className="relative flex flex-col lg:flex-row items-center justify-between bg-gradient-to-tr from-[#071111] via-[#071111] to-[#50411b] text-white py-20 lg:py-32 min-h-screen overflow-x-hidden">
+      <div className="flex flex-col items-center justify-between w-full gap-8 px-4 mx-auto lg:flex-row max-w-7xl">
+        <FadeContent
+          blur={true}
+          duration={700}
+          easing="ease-out"
+          initialOpacity={0}
         >
-            <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-12">
-                {/* LEFT CONTENT */}
-                <div className="text-center md:text-left space-y-6">
-                    <h1
-                        className="text-4xl md:text-6xl font-tiroBangla font-bold"
-                        style={{ color: "#146C50" }}
-                    >
-                        Qur’anic ‘Ilm
-                        <div
-                            className="h-1 w-24 mt-2 rounded mx-auto md:mx-0"
-                            style={{ backgroundColor: "#C3A753" }}
-                        />
-                    </h1>
-                    <p
-                        className="text-lg md:text-xl font-hindSiliguri leading-relaxed"
-                        style={{ color: "#333333" }}
-                    >
-                        একটি আধুনিক ইসলামী একাডেমি, যেখানে আপনি অভিজ্ঞ শিক্ষকদের মাধ্যমে কুরআন ও ইসলামি জ্ঞান অর্জন করতে পারবেন।
-                    </p>
-                    <Link
-                        to="/courses"
-                        className="inline-block font-semibold font-hindSiliguri text-base transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-                        style={{
-                            backgroundColor: "#C3A753",
-                            color: "#FAF9F6",
-                            padding: "0.75rem 2rem",
-                            borderRadius: "999px",
-                            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-                        }}
-                    >
-                        কোর্সসমূহ দেখুন
-                    </Link>
-                </div>
-
-                {/* RIGHT IMAGE / ILLUSTRATION */}
-                <div className="flex justify-center">
-                    <img
-                        src="/Quranic-Ilm.png"
-                        alt="Islamic Learning Illustration"
-                        className="w-72 md:w-full animate-fadeInSlow"
-                        loading="lazy"
-                    />
-                </div>
+          <div className="relative max-w-2xl space-y-6 text-center md:text-left">
+            <Star className="absolute w-10 h-10 text-purple-700 fill-purple-700 -top-10 left-1/4 opacity-35" />
+            <Star className="absolute text-[#C3A753] fill-[#C3A753] h-14 w-14 -bottom-24 left-1/5 opacity-35" />
+            <div className="absolute w-4 h-4 rounded-full bg-primary right-[0%] opacity-35"></div>
+            <div className="absolute bottom-0 right-0 w-8 h-8 bg-orange-700 rounded-full opacity-35"></div>
+            <h1 className="text-3xl font-bold md:text-5xl !leading-[50px] md:!leading-[80px]">
+              পরিষ্কার ও সুশৃঙ্খলভাবে <br />
+              <span className="text-[#C3A753]">কোরআন</span> তিলাওয়াত করুন
+              <span className="block mt-2 text-sm font-normal text-gray-300">
+                (সূরা মুজ্জাম্মিল : আয়াত ৪)
+              </span>
+            </h1>
+            <p className="text-lg leading-relaxed text-gray-300">
+              আরবি, কোরআন এবং ইসলামী স্টাডিজের সমন্বিত কোর্স যা সব বয়স ও দক্ষতার
+              শিক্ষার্থীদের জন্য অনলাইনে সহজলভ্য।
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 md:justify-start">
+              <Link
+                to="/courses"
+                className="px-6 py-3 rounded-full bg-primary text-white font-medium hover:bg-[#4f7d52] transition"
+              >
+                আপনার কোর্স খুঁজুন
+              </Link>
+              <Link
+                to="/register"
+                className="px-6 py-3 rounded-full border border-white text-white font-medium hover:bg-white hover:text-[#0f1e1d] transition"
+              >
+                বিনামূল্যে সাইন আপ করুন
+              </Link>
             </div>
-
-            {/* Curved SVG Divider */}
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-                <svg
-                    viewBox="0 0 1440 100"
-                    preserveAspectRatio="none"
-                    className="w-full h-20 md:h-28"
+          </div>
+        </FadeContent>
+        <div className="relative w-full max-w-sm mt-12 md:mt-0 md:ml-12">
+          <FadeContent
+            blur={true}
+            duration={1300}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            <Slider {...settings}>
+              {courses.map((course, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-b from-[#1a2624] to-[#0f1e1d] rounded-2xl shadow-lg p-6 border border-gray-700"
                 >
-                    <path
-                        d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,85.3C672,96,768,96,864,90.7C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32V100H1392C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100H0Z"
-                        fill="#FAF9E9"
+                  <div className="flex justify-center">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="object-contain h-40"
                     />
-                </svg>
-            </div>
-        </section>
-    );
+                  </div>
+                  <h3 className="mt-6 text-2xl font-semibold">
+                    {course.title}
+                  </h3>
+                  <p className="text-[#C3A753] text-xl font-bold mt-2">
+                    {course.price}
+                  </p>
+                  <div className="flex items-center justify-between pt-4 mt-6 text-sm border-t border-gray-600">
+                    <div>
+                      <p className="text-gray-400">সময়কাল</p>
+                      <p className="font-medium text-green-400">
+                        {course.duration}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-gray-400">স্তর</p>
+                      <p className="font-medium text-yellow-400">
+                        {course.level}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap justify-between gap-4 mt-6">
+                    <Link
+                      to="/register"
+                      className="text-center px-4 py-2 rounded-full bg-primary text-white font-medium hover:bg-[#4f7d52] transition"
+                    >
+                      এখনই ভর্তি হোন
+                    </Link>
+                    <Link
+                      to={course.link}
+                      className=" text-center px-4 py-2 rounded-full border border-white text-white font-medium hover:bg-white hover:text-[#0f1e1d] transition"
+                    >
+                      বিস্তারিত দেখুন
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </FadeContent>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default HeroSection;
