@@ -3,8 +3,8 @@ import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 const Footer = () => {
     return (
         <footer className="bg-[#0F1E1D] text-[#FAF9F6] pt-12 pb-6 px-4 md:px-10 font-hindSiliguri">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-                {/* Brand Info */}
+            <div className="grid grid-cols-1 gap-8 mx-auto max-w-7xl md:grid-cols-4">
+            
                 <div>
                     <h2 className="text-3xl font-tiroBangla mb-2 text-[#C3A753]">Qur’anic ‘Ilm</h2>
                     <p className="text-sm text-[#FAF9F6]/80">
@@ -12,7 +12,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* Quick Links */}
+              
                 <div>
                     <h3 className="text-xl font-bold text-[#C3A753] mb-4">দ্রুত লিংক</h3>
                     <ul className="space-y-2 text-sm">
@@ -22,7 +22,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact */}
+             
                 <div>
                     <h3 className="text-xl font-bold text-[#C3A753] mb-4">যোগাযোগ</h3>
                     <ul className="text-sm space-y-3 text-[#FAF9F6]/90">
@@ -41,10 +41,10 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* WhatsApp Button */}
+            
                 <div className="text-center md:text-left">
                     <h3 className="text-xl font-bold text-[#C3A753] mb-4">যোগ দিন</h3>
-                    <p className="text-sm mb-4">ক্লাসে অংশ নিতে WhatsApp এ বার্তা পাঠান</p>
+                    <p className="mb-4 text-sm">ক্লাসে অংশ নিতে WhatsApp এ বার্তা পাঠান</p>
                     <a
                         href="https://wa.me/8801608318553?text=আমি কুরআন শেখার কোর্সে ভর্তি হতে চাই।"
                         target="_blank"
@@ -56,7 +56,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom Line */}
+        
             <div className="border-t border-[#FAF9F6]/20 mt-12 pt-4 text-center text-sm text-[#FAF9F6]/70">
                 © {new Date().getFullYear()} Qur’anic ‘Ilm. সর্বস্বত্ব সংরক্ষিত।
             </div>

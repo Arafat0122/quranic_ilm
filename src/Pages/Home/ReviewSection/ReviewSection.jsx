@@ -88,7 +88,7 @@ const ReviewSection = () => {
                     aria-hidden={current !== index}
                     aria-label={`Review by ${review.name}`}
                   >
-                    {/* Quote Icon as background */}
+          
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -132,7 +132,7 @@ const ReviewSection = () => {
               <MoveRight />
             </button>
 
-            {/* Prev/Next Buttons */}
+          
           </div>
         </FadeContent>
       </div>

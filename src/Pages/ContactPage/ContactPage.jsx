@@ -34,7 +34,7 @@ const ContactPage = () => {
         initialOpacity={0}
       >
         <div className="grid  pt-[30px] md:pt-[60px] lg:pt-[120px] max-w-6xl grid-cols-1 gap-10 px-4 mx-auto p md:grid-cols-2">
-          {/* CONTACT INFO */}
+  
           <div>
             <h2 className="mb-4 text-3xl text-black md:text-5xl font-tiroBangla">
               আমাদের সঙ্গে <span className="text-primary">যোগাযোগ</span> করুন
@@ -77,7 +77,7 @@ const ContactPage = () => {
             </ul>
           </div>
 
-          {/* CONTACT FORM */}
+ 
           <div className="bg-white shadow-xl rounded-2xl border border-[#C3A753] p-8">
             <h3 className="text-2xl font-tiroBangla text-[#146C50] mb-6">
               আমাদেরকে মেসেজ পাঠান

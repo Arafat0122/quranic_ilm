@@ -11,8 +11,7 @@ import FadeContent from "../../Common/AnimatedText/AnimatedText";
 const About = () => {
   return (
     <section className="bg-[#FAF9F6] text-[#333] font-notoSansBengali ">
-      {/* Hero */}
-      {/* Hero */}
+     
       <div className="bg-gradient-to-tr pb-[30px] md:pb-[120px] pt-[130px] md:pt-[200px] from-[#071111] via-[#071111] to-[#50411b] backdrop-blur-2xl  flex flex-col items-center justify-center text-center text-white px-6">
         <FadeContent
           blur={true}
@@ -106,8 +105,6 @@ const About = () => {
           <CreateStudent />
         </div>
 
-        {/* CTA */}
-
         <FadeContent
           blur={true}
           duration={700}
@@ -128,7 +125,7 @@ const About = () => {
           </div>
         </FadeContent>
 
-        {/* Closing Hadith */}
+
         <div className="text-center ">
           <p className="text-xl font-naskhArabic text-[#146C50] mb-2">
             ﴿طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ﴾
