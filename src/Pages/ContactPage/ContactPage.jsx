@@ -9,115 +9,140 @@ import FadeContent from "../../Common/AnimatedText/AnimatedText";
 
 const ContactPage = () => {
   return (
-    <section className="pb-[30px] md:pb-20">
-      <div className="pt-[120px] pb-[30px] md:pt-[150px]  md:pb-[120px] flex flex-col items-center justify-center text-center bg-gradient-to-tr from-[#071111] via-[#071111] to-[#50411b] text-white px-4">
-        <FadeContent
-          blur={true}
-          duration={700}
-          easing="ease-out"
-          initialOpacity={0}
-        >
-          <h1 className="mb-4 text-3xl md:text-5xl font-tiroBangla">
-            আমাদের সঙ্গে <span className="text-[#C3A753]">যোগাযোগ</span> করুন
+    <section className="bg-white min-h-screen">
+      {/* Hero Header Section */}
+      <div className="pt-32 pb-16 md:pt-40 md:pb-24 flex flex-col items-center justify-center text-center bg-gradient-to-tr from-[#060d0d] via-[#0b1a19] to-[#3a2f14] text-white px-4">
+        <FadeContent blur={true} duration={700}>
+          <h1 className="mb-6 text-4xl md:text-6xl font-bold font-tiroBangla">
+            যোগাযোগ ও <span className="text-[#C3A753]">পরামর্শ</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-base md:text-lg font-hindSiliguri">
-            আপনার যেকোনো প্রশ্ন, জিজ্ঞাসা বা ভর্তির জন্য আমাদের সঙ্গে সরাসরি
-            যোগাযোগ করুন। আমরা সবসময় আপনার জন্য প্রস্তুত।
+          <p className="max-w-2xl mx-auto text-lg md:text-xl font-hindSiliguri text-gray-300 leading-relaxed">
+            আপনার যেকোনো জিজ্ঞাসা বা পরামর্শ আমাদের জন্য অত্যন্ত মূল্যবান। দ্বীনি এই ইলমি সফরে আমরা সর্বদা আপনার পাশে আছি ইনশাআল্লাহ।
           </p>
         </FadeContent>
       </div>
 
-      <FadeContent
-        blur={true}
-        duration={700}
-        easing="ease-out"
-        initialOpacity={0}
-      >
-        <div className="grid  pt-[30px] md:pt-[60px] lg:pt-[120px] max-w-6xl grid-cols-1 gap-10 px-4 mx-auto p md:grid-cols-2">
-  
-          <div>
-            <h2 className="mb-4 text-3xl text-black md:text-5xl font-tiroBangla">
-              আমাদের সঙ্গে <span className="text-primary">যোগাযোগ</span> করুন
-            </h2>
-            <p className="font-hindSiliguri text-[#333333] text-base md:text-lg mb-6 leading-relaxed">
-              আপনি দেশ কিংবা দেশের বাইরে যেখানেই থাকুন, আমাদের মেহমান হিসেবে
-              আপনাকে স্বাগতম। যেকোনো প্রশ্ন, কোর্স সম্পর্কে জানতে কিংবা ভর্তির
-              জন্য সরাসরি যোগাযোগ করুন।
-            </p>
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <FadeContent blur={true} duration={800}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-            <ul className="space-y-4 font-hindSiliguri text-[#333333] text-base">
-              <li className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-[#C3A753] text-xl mt-1" />
-                <span>কায়রো, মিশর</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <FaPhoneAlt className="text-[#C3A753] text-xl mt-1" />
-                <a className="hover:underline">+8801xxxxxxxx</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <FaEnvelope className="text-[#C3A753] text-xl mt-1" />
-                <a
-                  href="mailto:info@quranicilm.com"
-                  className="hover:underline"
-                >
-                  info@quranicilm.com
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <FaWhatsapp className="text-[#C3A753] text-xl mt-1" />
-                <a
-                  href="https://wa.me/8801608318553"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  WhatsApp: +8801xxxxxxxx
-                </a>
-              </li>
-            </ul>
+            {/* Contact Information Side */}
+            <div className="space-y-10">
+              <div>
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-tiroBangla mb-6">
+                  আমাদের সাথে <span className="text-primary">যুক্ত হোন</span>
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed font-hindSiliguri mb-8">
+                  আপনি দেশ কিংবা দেশের বাইরে যেখানেই থাকুন, সরাসরি যোগাযোগ করুন। কোর্সের ফি, সময়সূচী কিংবা যেকোনো পরামর্শের জন্য আমাদের হোয়াটসঅ্যাপ বা ইমেইল করতে পারেন।
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {/* Info Card - Location */}
+                <div className="flex items-center gap-5 group p-4 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-primary/5 transition-all">
+                  <div className="w-12 h-12 flex items-center justify-center bg-[#C3A753]/10 text-[#C3A753] rounded-full text-xl group-hover:bg-[#C3A753] group-hover:text-white transition-all">
+                    <FaMapMarkerAlt />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">অফিস ঠিকানা</h4>
+                    <p className="text-gray-600">রংপুর, বাংলাদেশ</p>
+                  </div>
+                </div>
+
+                {/* Info Card - Phone */}
+                <div className="flex items-center gap-5 group p-4 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-primary/5 transition-all">
+                  <div className="w-12 h-12 flex items-center justify-center bg-[#C3A753]/10 text-[#C3A753] rounded-full text-xl group-hover:bg-[#C3A753] group-hover:text-white transition-all">
+                    <FaPhoneAlt />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">সরাসরি কল করুন</h4>
+                    <a href="tel:+8801608318553" className="text-gray-600 hover:text-primary transition-colors">+880 1608-318553</a>
+                  </div>
+                </div>
+
+                {/* Info Card - Email */}
+                <div className="flex items-center gap-5 group p-4 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-primary/5 transition-all">
+                  <div className="w-12 h-12 flex items-center justify-center bg-[#C3A753]/10 text-[#C3A753] rounded-full text-xl group-hover:bg-[#C3A753] group-hover:text-white transition-all">
+                    <FaEnvelope />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">ইমেইল ঠিকানা</h4>
+                    <a href="mailto:info@quranicilm.com" className="text-gray-600 hover:text-primary transition-colors">info@quranicilm.com</a>
+                  </div>
+                </div>
+
+                {/* Info Card - WhatsApp */}
+                <div className="flex items-center gap-5 group p-4 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-primary/5 transition-all">
+                  <div className="w-12 h-12 flex items-center justify-center bg-green-100 text-green-600 rounded-full text-xl group-hover:bg-green-600 group-hover:text-white transition-all">
+                    <FaWhatsapp />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">হোয়াটসঅ্যাপ</h4>
+                    <a href="https://wa.me/8801608318553" target="_blank" className="text-gray-600 hover:text-green-600 transition-colors">+880 1608-318553</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form Side */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-[#C3A753]/10 rounded-[2.5rem] blur-xl -z-10"></div>
+              <div className="bg-white shadow-2xl rounded-[2rem] p-8 md:p-12 border border-gray-100 relative">
+                <h3 className="text-2xl md:text-3xl font-bold font-tiroBangla text-gray-900 mb-8 border-b border-gray-100 pb-4">
+                  আপনার মেসেজ পাঠান
+                </h3>
+
+                <form className="space-y-6 font-notoSansBengali">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-sm font-bold text-gray-700 ml-1">আপনার নাম</label>
+                      <input
+                        type="text"
+                        placeholder="নাম লিখুন"
+                        className="w-full px-5 py-4 bg-gray-50 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-bold text-gray-700 ml-1">মোবাইল নম্বর</label>
+                      <input
+                        type="text"
+                        placeholder="017XXXXXXXX"
+                        className="w-full px-5 py-4 bg-gray-50 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-gray-700 ml-1">ইমেইল (ঐচ্ছিক)</label>
+                    <input
+                      type="email"
+                      placeholder="example@mail.com"
+                      className="w-full px-5 py-4 bg-gray-50 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-gray-700 ml-1">আপনার জিজ্ঞাসা</label>
+                    <textarea
+                      rows="4"
+                      placeholder="বিস্তারিত এখানে লিখুন..."
+                      className="w-full px-5 py-4 bg-gray-50 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-primary hover:bg-[#3d633f] text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 active:scale-95"
+                  >
+                    মেসেজ পাঠান
+                  </button>
+                </form>
+              </div>
+            </div>
+
           </div>
-
- 
-          <div className="bg-white shadow-xl rounded-2xl border border-[#C3A753] p-8">
-            <h3 className="text-2xl font-tiroBangla text-[#146C50] mb-6">
-              আমাদেরকে মেসেজ পাঠান
-            </h3>
-
-            <form className="space-y-5 font-notoSansBengali">
-              <div>
-                <label className="block mb-1 text-[#333333]">নাম</label>
-                <input
-                  type="text"
-                  placeholder="আপনার নাম"
-                  className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C3A753]"
-                />
-              </div>
-              <div>
-                <label className="block mb-1 text-[#333333]">ইমেইল</label>
-                <input
-                  type="email"
-                  placeholder="আপনার ইমেইল"
-                  className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C3A753]"
-                />
-              </div>
-              <div>
-                <label className="block mb-1 text-[#333333]">মেসেজ</label>
-                <textarea
-                  rows="5"
-                  placeholder="আপনার বার্তা লিখুন..."
-                  className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C3A753]"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-[#C3A753] hover:bg-emerald-700 text-[#FAF9F6] py-3 rounded-full font-semibold transition-all"
-              >
-                মেসেজ পাঠান
-              </button>
-            </form>
-          </div>
-        </div>
-      </FadeContent>
+        </FadeContent>
+      </div>
 
       <FAQSection />
     </section>

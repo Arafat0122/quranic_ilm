@@ -1,66 +1,83 @@
-import React from "react";
-import { BookOpen, Calendar, UserCheck, Gamepad2 } from "lucide-react";
+import { BookOpen, Calendar, Users, FileText } from "lucide-react"; // Icons updated for better context
 import FadeContent from "../../../Common/AnimatedText/AnimatedText";
 
 const CreateStudent = () => {
+  // Feature Data with Islamic Tone & Polished Bangla
   const features = [
     {
-      icon: <BookOpen className="w-8 h-8 text-yellow-600" />,
-      title: "অনলাইন লার্নিং প্ল্যাটফর্ম",
+      icon: <BookOpen className="w-8 h-8" />, // Assuming 'text-primary' is your brand color
+      title: "সুশৃঙ্খল পাঠ্যক্রম",
       description:
-        "একটি সুসংগঠিত কোর্স পরিকল্পনা অনুসরণ করে, আপনার শিক্ষক আপনাকে দ্রুত এবং সঠিকভাবে শেখার জন্য গাইড করবেন।",
+        "অভিজ্ঞ উস্তাদদের নিবিড় তত্ত্বাবধানে সুসংগঠিত সিলেবাসের মাধ্যমে সহিহ শুদ্ধভাবে দ্বীনি ইলম অর্জনের সুযোগ।",
     },
     {
-      icon: <Calendar className="w-8 h-8 text-yellow-600" />,
-      title: "লচিকতাসম্পন্ন সময়সূচি",
+      icon: <Calendar className="w-8 h-8" />,
+      title: "ফ্লেক্সিবল সময়সূচি",
       description:
-        "আপনার আরবি এবং কোরআন ক্লাসের সময় নিজের সুবিধা অনুযায়ী নির্ধারণ করুন! আমাদের শিক্ষক ২৪/৭ উপলব্ধ।",
+        "আপনার ব্যস্ততা অনুযায়ী ক্লাস শিডিউল সাজিয়ে নিন। দুনিয়াবি কাজের পাশাপাশি ইলম চর্চা এখন আরও সহজ।",
     },
     {
-      icon: <UserCheck className="w-8 h-8 text-yellow-600" />,
-      title: "লাইভ শিক্ষক",
+      icon: <Users className="w-8 h-8" />,
+      title: "সরাসরি লাইভ ক্লাস",
       description:
-        "ইন্টারেক্টিভ লাইভ ক্লাস যেখানে বিশেষজ্ঞ শিক্ষক আপনাকে ধাপে ধাপে গাইড করবেন।",
+        "উস্তাদ ও ছাত্রের সরাসরি কথোপকথনের মাধ্যমে পাঠ গ্রহণ এবং তাৎক্ষণিক প্রশ্নোত্তরের মাধ্যমে সংশোধনের ব্যবস্থা।",
     },
     {
-      icon: <Gamepad2 className="w-8 h-8 text-yellow-600" />,
-      title: "খেলাধুলা ও কার্যক্রম",
+      icon: <FileText className="w-8 h-8" />,
+      title: "পাঠ্য উপকরণ ও রিসোর্স",
       description:
-        "আমাদের অনলাইন কার্যক্রম কেন্দ্রের মাধ্যমে গেম, ওয়ার্কশীট এবং শেখার উপকরণ পাওয়া যাবে।",
+        "কোর্সের সাথে পাচ্ছেন প্রয়োজনীয় পিডিএফ বই, শিট এবং প্র্যাকটিস ম্যাটেরিয়ালস, যা আপনার শেখার পথকে সহজ করবে ইনশাআল্লাহ।",
     },
   ];
 
   return (
-    <section className="pt-[30px] md:pt-20 lg:pt-[120px] px-4">
+    <section className="py-16 md:py-24 lg:py-32 px-4 bg-gray-50/50">
       <FadeContent
         blur={true}
         duration={700}
         easing="ease-out"
         initialOpacity={0}
       >
-        <div className="mx-auto max-w-7xl ">
-          <header className="flex flex-col items-center justify-between w-full gap-4 mb-10 lg:gap-8 lg:flex-row">
-            <h1 className="lg:mb-4 text-2xl md:text-4xl font-bold text-black md:!leading-[50px]">
-              শিক্ষার্থীদের সফলতা নিশ্চিত করছি <br />{" "}
-              <span className="text-primary">আল কোরআন</span> এর মাধ্যমে
-            </h1>
-            <p className="max-w-md text-sm text-black md:text-base">
-              আমরা বুঝি সবাইর সময়সূচি ভিন্ন। এজন্য আমরা নমনীয় লার্নিং অপশন
-              প্রদান করি।
+        <div className="mx-auto max-w-7xl">
+          {/* Header Section */}
+          <header className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 lg:mb-16">
+            <div className="text-center lg:text-left space-y-4 max-w-2xl">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                তালিবুল ইলমদের জন্য <br />
+                <span className="text-primary inline-block mt-2">
+                  আমাদের বিশেষ সুবিধাসমূহ
+                </span>
+              </h1>
+              <div className="h-1 w-24 bg-primary/30 mx-auto lg:mx-0 rounded-full"></div>
+            </div>
+
+            <p className="max-w-md text-base text-gray-600 text-center lg:text-right leading-relaxed font-medium">
+              ব্যস্ততার মাঝেও দ্বীনি ইলম অর্জন যেন সহজ হয়, সেদিকে লক্ষ্য রেখেই আমাদের এই আয়োজন। আপনার সুবিধামতো সময়েই ক্লাস করার সুযোগ রয়েছে।
             </p>
           </header>
 
-          <div className="grid grid-cols-1 gap-6 p-8 text-white rounded-xl md:grid-cols-2 2xl:grid-cols-4 bg-primary md:p-6">
+          {/* Features Grid - Improved Responsiveness */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center w-full p-6 text-center text-gray-800 bg-white shadow-lg rounded-2xl md:p-8"
+                className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1 flex flex-col items-center text-center"
               >
-                <div className="p-3 mb-4 bg-yellow-200 rounded-full">
-                  {feature.icon}
+                {/* Icon Circle with Hover Effect */}
+                <div className="mb-6 p-4 bg-primary/10 rounded-full group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  {/* Cloning element to control color on hover if needed, or rely on parent class */}
+                  <div className="text-primary group-hover:text-white transition-colors duration-300">
+                    {feature.icon}
+                  </div>
                 </div>
-                <h3 className="mb-2 text-lg font-semibold">{feature.title}</h3>
-                <p className="text-sm text-gray-600">{feature.description}</p>
+
+                <h3 className="mb-3 text-xl font-bold text-gray-800 group-hover:text-primary transition-colors">
+                  {feature.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
